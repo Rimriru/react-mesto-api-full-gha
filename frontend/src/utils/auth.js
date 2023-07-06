@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://mesto-api.nomoreparties.sbs";
 
 function checkResponse(res) {
   if(res.ok) {

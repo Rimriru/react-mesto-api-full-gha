@@ -94,7 +94,7 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: "http://localhost:3000",
+  baseUrl: "https://mesto-api.nomoreparties.sbs",
   headers: {
     "Content-Type": "application/json",
   },
