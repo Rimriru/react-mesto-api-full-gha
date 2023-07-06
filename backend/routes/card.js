@@ -11,8 +11,9 @@ const {
   cardIdValidation,
 } = require('../utils/cardValidationRules');
 
-router.get(getCards);
+router.get('/', getCards);
 router.post(
+  '/',
   createCardValidation,
   createCard,
 );
