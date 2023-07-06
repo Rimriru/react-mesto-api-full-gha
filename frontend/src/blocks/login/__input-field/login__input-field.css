@@ -1,0 +1,18 @@
+.login__input-field {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #CCCCCC;
+  padding: 0 0 13px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #CCCCCC;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+}
+
+.login__input-field:first-child {
+  margin-bottom: 30px;
+}

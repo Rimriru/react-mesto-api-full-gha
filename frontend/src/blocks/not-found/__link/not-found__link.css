@@ -1,0 +1,12 @@
+.not-found__link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity .3s ease-in-out;
+}
+
+.not-found__link:hover {
+  opacity: .6;
+}

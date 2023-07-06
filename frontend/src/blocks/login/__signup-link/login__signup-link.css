@@ -1,0 +1,16 @@
+.login__signup-link {
+  max-width: 358px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity .3s ease-in-out;
+}
+
+.login__signup-link:hover {
+  opacity: 0.6;
+}

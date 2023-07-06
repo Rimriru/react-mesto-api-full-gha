@@ -1,0 +1,15 @@
+.header__nav-link {
+  max-width: 114px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #A9A9A9;
+  transition: opacity .3s ease-in-out;
+}
+
+.header__nav-link:hover {
+  opacity: 0.6;
+}

@@ -1,0 +1,19 @@
+.header__container {
+  display: flex;
+  gap: 24px;
+  justify-items: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  .header__container {
+    margin-right: 27px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__container {
+    gap: 10px;
+    flex-direction: column-reverse;
+  }
+}

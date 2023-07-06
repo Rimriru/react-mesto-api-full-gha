@@ -1,0 +1,23 @@
+.header__nav-button {
+  max-width: 114px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #A9A9A9;
+  transition: opacity .3s ease-in-out;
+  cursor: pointer;
+}
+
+.header__nav-button:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 500px) {
+  .header__nav-button{
+    padding-bottom: 0;
+  }
+}
