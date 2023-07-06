@@ -20,9 +20,10 @@ const login = (req, res, next) => {
     .orFail(new UnauthorizedError(unauthorizedErrorMessage))
     .then((user) => bcrypt.compare(password, user.password)
       .then(() => {
+        const { NODE_ENV, JWT_SECRET } = process.env;
         const token = jwt.sign(
           { _id: user._id },
-          `${process.env.JWT_SECRET}`,
+          `${NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-pass-i-guess'}`,
           { expiresIn: 3600000 * 24 * 7 },
         );
         res.cookie('jwt', token, {
