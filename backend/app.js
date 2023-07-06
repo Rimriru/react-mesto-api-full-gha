@@ -18,7 +18,7 @@ const {
 const auth = require('./middlewares/auth');
 const errorHandler = require('./errors/errorHandler');
 
-const { PORT, MONGODB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
+const { PORT = 4000, MONGODB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 const corsOptions = {
   origin: 'http://localhost:3000',
   credentials: true,
