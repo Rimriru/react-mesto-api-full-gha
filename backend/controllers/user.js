@@ -23,7 +23,7 @@ const login = (req, res, next) => {
         const { NODE_ENV, JWT_SECRET } = process.env;
         const token = jwt.sign(
           { _id: user._id },
-          NODE_ENV === 'production' ? `${JWT_SECRET}` : 'some-secret-pass-i-guess',
+          `${NODE_ENV}` === 'production' ? `${JWT_SECRET}` : 'some-secret-pass-i-guess',
           { expiresIn: 3600000 * 24 * 7 },
         );
         res.cookie('jwt', token, {
