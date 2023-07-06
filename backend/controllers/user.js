@@ -1,4 +1,3 @@
-// const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
@@ -22,7 +21,7 @@ const login = (req, res, next) => {
       .then(() => {
         const token = jwt.sign(
           { _id: user._id },
-          `${process.env.NODE_ENV === 'production' ? process.env.JWT_SECRET : 'super-secret-pass'}`,
+          `${process.env.JWT_SECRET}`,
           { expiresIn: 3600000 * 24 * 7 },
         );
         res.cookie('jwt', token, {
