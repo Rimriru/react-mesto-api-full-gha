@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const rateLimit = require('express-rate-limit');
 const { errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const routes = require('./routes/index');
@@ -23,6 +24,12 @@ const corsOptions = {
   origin: 'https://mesto-page.nomoreparties.sbs',
   credentials: true,
 };
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standartHeaders: true,
+  legacyHeaders: false,
+});
 
 const app = express();
 
@@ -36,6 +43,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(requestLogger);
 app.use(cors(corsOptions));
+app.use(limiter);
 
 app.get('/crash-test', () => {
   setTimeout(() => {

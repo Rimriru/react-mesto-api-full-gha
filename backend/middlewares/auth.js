@@ -9,7 +9,7 @@ const auth = (req, res, next) => {
     next(new UnauthorizedError(unauthorizedErrorMessage));
   } else {
     try {
-      const payload = jwt.verify(req.cookies.jwt, `${process.env.JWT_SECRET}`);
+      const payload = jwt.verify(req.cookies.jwt, `${process.env.JWT_SECRET || 'secret-for-developement'}`);
       req.user = payload;
       next();
     } catch (err) {

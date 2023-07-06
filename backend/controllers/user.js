@@ -21,7 +21,7 @@ const login = (req, res, next) => {
       .then(() => {
         const token = jwt.sign(
           { _id: user._id },
-          `${process.env.JWT_SECRET}`,
+          `${process.env.JWT_SECRET || 'secret-for-developement'}`,
           { expiresIn: 3600000 * 24 * 7 },
         );
         res.cookie('jwt', token, {
