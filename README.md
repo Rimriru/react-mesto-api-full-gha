@@ -1,8 +1,4 @@
-# Проект Mesto (React)
-
-Frontend https://mesto-page.nomoreparties.sbs
-
-Backend https://mesto-api.nomoreparties.sbs
+# Проект Mesto
 
 ## Описание
 
@@ -12,4 +8,16 @@ Backend https://mesto-api.nomoreparties.sbs
 
 ## Стек
 
-Стек: HTML, CSS, React, BEM, Node.js, Express.js, MongoDB, Nginx
+Стек: HTML, CSS, React, Node.js, Express.js, MongoDB, Nginx
+
+## Инструкция по установке
+
+```sh
+npm install
+```
+
+### Запуск
+
+```sh
+npm run dev
+```
